@@ -106,3 +106,16 @@ require('lualine').setup {
    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=wtfox/jellybeans.nvim&type=Date" />
  </picture>
 </a>
+
+## Contributors' Wall
+
+<a href="https://github.com/wtfox/jellybeans.nvim/graphs/contributors">
+    <img src="https://contri.buzz/api/wall?repo=wtfox/jellybeans.nvim&onlyAvatars=true" alt="Contributors' Wall for wtfox/jellybeans.nvim" />
+</a>
+
+<br />
+<br />
+
+<p align="center">
+    Make your Contributors' Wall with <a href="https://contri.buzz/"><i>Contri.Buzz</i></a>
+</p>
