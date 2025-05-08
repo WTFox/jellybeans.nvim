@@ -1,1 +1,2 @@
-require("jellybeans").load({ palette = "jellybeans_muted" })
+require("jellybeans").load("jellybeans_muted")
+

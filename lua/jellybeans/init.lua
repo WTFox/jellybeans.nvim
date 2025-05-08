@@ -5,10 +5,10 @@ function M.setup(opts)
   require("jellybeans.config").setup(opts)
 end
 
-function M.load()
+function M.load(palette_name_override)
   local ok, result = pcall(function()
     local config = require("jellybeans.config")
-    return require("jellybeans.highlights").setup(config.opts)
+    return require("jellybeans.highlights").setup(config.opts, palette_name_override)
   end)
 
   if not ok then

@@ -1,1 +1,2 @@
-require("jellybeans").load({ style = "light" })
+require("jellybeans").load("jellybeans_light")
+
