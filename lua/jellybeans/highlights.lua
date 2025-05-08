@@ -13,9 +13,21 @@ function M.setup(opts, palette_name_override)
   local p = require("jellybeans.palettes").get_palette(palette_name, opts)
 
   local groups = require("jellybeans.groups").setup(p.palette, opts)
+
+  local terminal_colors = nil
   for group, hl in pairs(groups) do
-    hl = type(hl) == "string" and { link = hl } or hl
-    vim.api.nvim_set_hl(0, group, hl)
+    if group == "_terminal_colors" then
+      terminal_colors = hl
+    else
+      hl = type(hl) == "string" and { link = hl } or hl
+      vim.api.nvim_set_hl(0, group, hl)
+    end
+  end
+
+  if terminal_colors then
+    for i = 0, 15 do
+      vim.g["terminal_color_" .. i] = terminal_colors[i]
+    end
   end
 
   local has_lualine, lualine = pcall(require, "lualine")

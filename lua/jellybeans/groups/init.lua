@@ -36,6 +36,7 @@ function M.setup(colors, opts)
     syntax = true,
     semantic_tokens = true,
     treesitter = true,
+    terminal = true,
   }
   if opts.plugins.all then
     for _, group in pairs(M.plugins) do
