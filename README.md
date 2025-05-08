@@ -2,16 +2,16 @@
 
 A port of the jellybeans colorscheme for Neovim, written in Lua. Comes with multiple palettes.
 
-_Vibrant Dark (Default) (palette = nil or "jellybeans")_
+\_Vibrant Dark (Default)
 ![Vibrant Dark](./images/default-vibrant.png)
 
-_Vibrant Light (palette = "jellybeans_light")_
+_Vibrant Light (`jellybeans_light`)_
 ![Vibrant Light](./images/default-vibrant-light.png)
 
-_Muted Dark (palette = "jellybeans_muted")_
+_Muted Dark (`jellybeans_muted`)_
 ![Muted Dark](./images/muted.png)
 
-_Muted Light (palette = "jellybeans_muted_light")_
+_Muted Light (`jellybeans_muted_light`)_
 ![Muted Light](./images/muted-light.png)
 
 ## ✨ Features
@@ -55,11 +55,13 @@ Jellybeans ships with the following defaults
 
 ```lua
 {
-  style = "dark", -- "dark" or "light"
   transparent = false,
   italics = true,
   flat_ui = true, -- toggles "flat UI" for pickers
-  palette = nil, -- specify a palette variant: nil (default/"vibrant") or "jellybeans_muted"
+  background = {
+    dark = "jellybeans", -- default dark palette
+    light = "jellybeans_light", -- default light palette
+  },
   plugins = {
     all = false,
     auto = true, -- will read lazy.nvim and apply the colors for plugins that are installed
@@ -70,6 +72,8 @@ Jellybeans ships with the following defaults
   end,
 }
 ```
+
+> **Deprecated**: `style` and `palette` are no longer used. Instead, use the `background` table to set the default palette for dark and light backgrounds. This allows for more flexibility for future palettes and for your personal preferences.
 
 ### Available Palettes
 
