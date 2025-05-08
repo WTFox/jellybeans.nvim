@@ -1,27 +1,18 @@
 local M = {}
 
 ---@class ColorScheme: Palette
-function M.get_palette(palette, opts)
-  -- Set palette to "jellybeans" (default) or the specified palette
-  local type_palette = palette or "jellybeans"
-
-  -- Add "_light" suffix for light style
-  if opts.style == "light" then
-    type_palette = type_palette .. "_light"
-  end
-
-  -- Try to load the specified palette
-  local ok, colors = pcall(require, "jellybeans.palettes." .. type_palette)
+function M.get_palette(palette_name, opts)
+  local ok, p = pcall(require, "jellybeans.palettes." .. palette_name)
   if not ok then
-    vim.notify("Failed to load palette: " .. type_palette, vim.log.levels.ERROR)
-    -- Fall back to default jellybeans palette
+    vim.notify("Failed to load palette: " .. palette_name, vim.log.levels.ERROR)
     return require("jellybeans.palettes.jellybeans")
   end
 
   if opts.on_colors then
-    opts.on_colors(colors)
+    opts.on_colors(p.colors)
   end
-  return colors
+
+  return p
 end
 
 return M

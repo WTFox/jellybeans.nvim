@@ -90,4 +90,8 @@ palette.none = "NONE"
 palette.float_bg = palette.grey_three
 palette.float_border = palette.tundora
 
-return palette
+return {
+  name = "jellybeans_light",
+  style = "light",
+  palette = palette,
+}

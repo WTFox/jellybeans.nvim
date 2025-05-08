@@ -88,4 +88,8 @@ palette.none = "NONE"
 palette.float_bg = palette.gravel
 palette.float_border = palette.tundora
 
-return palette
+return {
+  name = "jellybeans_muted",
+  style = "dark",
+  palette = palette,
+}

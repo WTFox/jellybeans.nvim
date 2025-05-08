@@ -1,19 +1,24 @@
 local M = {}
 
+---@class jellybeans.Background
+---@field dark string
+---@field light string
+
 ---@class jellybeans.Config
----@field style? "dark"|"light"
 ---@field transparent? boolean
 ---@field italics? boolean
 ---@field flat_ui? boolean
----@field palette? string
 ---@field on_highlights? fun(highlights: jellybeans.Highlights, colors: ColorScheme)
 ---@field on_colors? fun(colors: ColorScheme)
+---@field background? jellybeans.Background
 M.defaults = {
-  style = "dark",
+  background = {
+    dark = "jellybeans_muted",
+    light = "jellybeans_muted_light",
+  },
   transparent = false,
   italics = true,
   flat_ui = true,
-  palette = nil,
   plugins = {
     all = false,
     auto = true,

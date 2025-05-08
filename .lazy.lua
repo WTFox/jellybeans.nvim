@@ -1,8 +1,13 @@
+if true then
+  return {}
+end
+
 local M = {
   module = "jellybeans",
-  colorscheme = "jellybeans",
+  palette = "jellybeans_muted",
+  style = "dark",
   opts = {
-    flat_ui = true,
+    flat_ui = false,
     plugins = {
       all = true,
     },
