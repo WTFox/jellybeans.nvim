@@ -2,6 +2,12 @@ local M = {}
 
 ---@param opts? jellybeans.Config
 function M.setup(opts, palette_name_override)
+  if vim.g.colors_name then
+    vim.cmd("hi clear")
+  end
+
+  vim.opt.termguicolors = true
+
   local bg = vim.o.background
   local palette_name = palette_name_override and palette_name_override or (opts and opts.background[bg]) or "jellybeans"
   local p = require("jellybeans.palettes").get_palette(palette_name, opts)
