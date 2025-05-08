@@ -1,11 +1,11 @@
-if true then
-  return {}
-end
-
 local M = {
   module = "jellybeans",
-  palette = "jellybeans_muted",
-  style = "dark",
+  -- palette = "jellybeans_muted",
+  -- style = "dark",
+  background = {
+    dark = "jellybeans_muted",
+    light = "jellybeans_muted_light",
+  },
   opts = {
     flat_ui = false,
     plugins = {
@@ -14,11 +14,12 @@ local M = {
   },
   globals = { vim = vim },
   cache = {}, ---@type table<string, boolean>
+  colorscheme = "jellybeans",
 }
 
 function M.reset()
   require("jellybeans.util").cache.clear()
-  local colors = require("jellybeans.palettes").get_palette("jellybeans", { style = "dark" })
+  local colors = require("jellybeans.palettes").get_palette("jellybeans", {})
   M.globals.colors = colors
   M.globals.c = colors
 end

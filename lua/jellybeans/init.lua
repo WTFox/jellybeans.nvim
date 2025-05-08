@@ -16,6 +16,7 @@ function M.load()
     return
   end
 
+  vim.g.colors_name = "jellybeans"
   return result
 end
 

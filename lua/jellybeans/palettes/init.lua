@@ -9,7 +9,7 @@ function M.get_palette(palette_name, opts)
   end
 
   if opts.on_colors then
-    opts.on_colors(p.colors)
+    opts.on_colors(p.palette)
   end
 
   return p

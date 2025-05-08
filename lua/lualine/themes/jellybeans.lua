@@ -2,7 +2,9 @@ local palettes = require("jellybeans.palettes")
 local config = require("jellybeans.config")
 
 local function get_theme()
-  local p = palettes.get_palette("jellybeans_muted", config.opts)
+  local bg = vim.o.background
+  local palette_name = config.opts.background[bg]
+  local p = palettes.get_palette(palette_name, config.opts)
   local c = p.palette
 
   if not c then
