@@ -1,7 +1,5 @@
 local M = {
   module = "jellybeans",
-  -- palette = "jellybeans_muted",
-  -- style = "dark",
   background = {
     dark = "jellybeans_muted",
     light = "jellybeans_muted_light",
