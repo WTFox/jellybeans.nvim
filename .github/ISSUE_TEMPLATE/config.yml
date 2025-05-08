@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions
+    url: https://github.com/anthonyfox/jellybeans.nvim/discussions
+    about: Please ask and answer questions here
+  - name: Documentation
+    url: https://github.com/anthonyfox/jellybeans.nvim#readme
+    about: Make sure you've read the documentation before submitting an issue

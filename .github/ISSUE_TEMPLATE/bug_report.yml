@@ -1,0 +1,126 @@
+name: Bug Report
+description: File a bug report related to jellybeans.nvim
+title: "[Bug]: "
+labels: ["bug", "triage"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+        Please complete the following information to help us address the issue quickly.
+
+  - type: checkboxes
+    id: pre-checks
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before submitting your bug report
+      options:
+        - label: I have updated jellybeans.nvim to the latest version
+          required: true
+        - label: I have searched existing issues to avoid creating duplicates
+          required: true
+        - label: I have verified this issue is related to jellybeans.nvim and not another plugin
+          required: true
+
+  - type: input
+    id: nvim-version
+    attributes:
+      label: Neovim Version
+      description: "What version of Neovim are you using? Run `:version` to find out."
+      placeholder: "Example: NVIM v0.9.2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: terminal
+    attributes:
+      label: Terminal Emulator
+      description: Which terminal emulator are you using?
+      options:
+        - iTerm2
+        - Alacritty
+        - Kitty
+        - Windows Terminal
+        - Wezterm
+        - Tmux
+        - Other (please specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      description: Which operating system are you using?
+      placeholder: "Example: macOS 13.5, Ubuntu 22.04, Windows 11"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: term-colors
+    attributes:
+      label: Terminal Colors
+      description: "Is `termguicolors` enabled? Run `:set termguicolors?` to find out."
+      options:
+        - "Yes"
+        - "No"
+        - "Not sure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is
+      placeholder: When using the jellybeans colorscheme, the cursor line highlight doesn't show up correctly...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen
+      placeholder: The cursor line should be highlighted with a subtle gray color...
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem
+      placeholder: Drag and drop screenshots here
+    validations:
+      required: false
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Minimal configuration example
+      description: Please provide a minimal configuration that reproduces the issue
+      placeholder: |
+        ```lua
+        -- Minimal init.lua example to reproduce the issue
+        vim.o.termguicolors = true
+        
+        require('jellybeans').setup({
+          -- Your configuration options here
+        })
+        
+        vim.cmd.colorscheme('jellybeans')
+        ```
+      render: lua
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here
+      placeholder: Any additional information that might be helpful...
+    validations:
+      required: false

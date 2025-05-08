@@ -1,0 +1,139 @@
+name: Theme Issue
+description: Report an issue with the jellybeans.nvim colorscheme appearance
+title: "[Theme]: "
+labels: ["theme", "appearance"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue with the jellybeans.nvim colorscheme!
+        Please complete the following information to help us address the issue quickly.
+
+  - type: checkboxes
+    id: pre-checks
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before submitting
+      options:
+        - label: I have updated jellybeans.nvim to the latest version
+          required: true
+        - label: I have searched existing issues to avoid creating duplicates
+          required: true
+        - label: I have verified `termguicolors` is enabled in my Neovim configuration
+          required: true
+
+  - type: dropdown
+    id: theme-variant
+    attributes:
+      label: Theme Variant
+      description: Which theme variant are you using?
+      options:
+        - jellybeans (default)
+        - jellybeans-light
+        - jellybeans-muted
+        - jellybeans-muted-light
+        - Other (please specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: nvim-version
+    attributes:
+      label: Neovim Version
+      description: "What version of Neovim are you using? Run `:version` to find out."
+      placeholder: "Example: NVIM v0.9.2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: terminal
+    attributes:
+      label: Terminal Emulator
+      description: Which terminal emulator are you using?
+      options:
+        - iTerm2
+        - Alacritty
+        - Kitty
+        - Windows Terminal
+        - Wezterm
+        - Tmux
+        - Other (please specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      description: Which operating system are you using?
+      placeholder: "Example: macOS 13.5, Ubuntu 22.04, Windows 11"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the issue
+      description: A clear and concise description of what the theme issue is
+      placeholder: The comments in JavaScript files are too dark and hard to read...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected appearance
+      description: A clear and concise description of how you expect it to look
+      placeholder: The comments should be a lighter shade of gray to improve readability...
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Please add screenshots to help explain your problem
+      placeholder: Drag and drop screenshots here showing the current appearance
+    validations:
+      required: true
+
+  - type: textarea
+    id: syntax-elements
+    attributes:
+      label: Affected syntax elements
+      description: If known, which syntax elements or highlight groups are affected?
+      placeholder: |
+        - Comment
+        - Function
+        - Keyword
+        - If not known, describe what type of code or content is showing the issue
+    validations:
+      required: false
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Minimal configuration example
+      description: Please provide your jellybeans.nvim configuration
+      placeholder: |
+        ```lua
+        -- How you're setting up jellybeans.nvim
+        require('jellybeans').setup({
+          -- Your configuration options here
+        })
+        
+        vim.cmd.colorscheme('jellybeans')
+        ```
+      render: lua
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here
+      placeholder: Any additional information that might be helpful...
+    validations:
+      required: false
