@@ -2,7 +2,7 @@
 
 A port of the jellybeans colorscheme for Neovim, written in Lua. Comes with multiple palettes.
 
-\_Vibrant Dark (Default)
+_Vibrant Dark (Default)_
 ![Vibrant Dark](./images/default-vibrant.png)
 
 _Vibrant Light (`jellybeans_light`)_
