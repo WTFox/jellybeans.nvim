@@ -12,29 +12,38 @@ local function get_theme()
     return {}
   end
 
+  -- For monochromatic theme, use accent colors instead of regular colors
+  local is_mono = palette_name:find("mono") ~= nil
+
+  local normal_bg = is_mono and c.accent_color_1 or c.morning_glory
+  local insert_bg = is_mono and c.accent_color_2 or c.green_smoke
+  local visual_bg = is_mono and c.grey_chateau or c.koromiko
+  local replace_bg = is_mono and c.boulder or c.raw_sienna
+  local command_bg = is_mono and c.silver or c.biloba_flower
+
   return {
     normal = {
-      a = { fg = c.total_black, bg = c.morning_glory, gui = "bold" },
+      a = { fg = c.total_black, bg = normal_bg, gui = "bold" },
       b = { fg = c.foreground, bg = c.grey_one },
       c = { fg = c.grey_two, bg = c.background },
     },
     insert = {
-      a = { fg = c.total_black, bg = c.green_smoke, gui = "bold" },
+      a = { fg = c.total_black, bg = insert_bg, gui = "bold" },
       b = { fg = c.foreground, bg = c.grey_one },
       c = { fg = c.grey_two, bg = c.background },
     },
     visual = {
-      a = { fg = c.total_black, bg = c.koromiko, gui = "bold" },
+      a = { fg = c.total_black, bg = visual_bg, gui = "bold" },
       b = { fg = c.foreground, bg = c.grey_one },
       c = { fg = c.grey_two, bg = c.background },
     },
     replace = {
-      a = { fg = c.total_black, bg = c.raw_sienna, gui = "bold" },
+      a = { fg = c.total_black, bg = replace_bg, gui = "bold" },
       b = { fg = c.foreground, bg = c.grey_one },
       c = { fg = c.grey_two, bg = c.background },
     },
     command = {
-      a = { fg = c.total_black, bg = c.biloba_flower, gui = "bold" },
+      a = { fg = c.total_black, bg = command_bg, gui = "bold" },
       b = { fg = c.foreground, bg = c.grey_one },
       c = { fg = c.grey_two, bg = c.background },
     },

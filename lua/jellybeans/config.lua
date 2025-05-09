@@ -1,6 +1,6 @@
 local M = {}
 
----@alias palette_name "jellybeans" | "jellybeans_light" | "jellybeans_muted" | "jellybeans_muted_light"
+---@alias palette_name "jellybeans" | "jellybeans_light" | "jellybeans_muted" | "jellybeans_muted_light" | "jellybeans_mono"
 
 ---@class jellybeans.Config.Background
 ---@field dark palette_name
