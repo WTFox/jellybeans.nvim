@@ -1,16 +1,14 @@
 local Util = require("jellybeans.util")
 
 ---@class Palette
--- The monochromatic jellybeans palette
 local palette = {
-  -- Base colors
   foreground = "#e8e8d3",
   background = "#151515",
 
-  accent_color_1 = "#7a8aa6", -- subtle blue
-  accent_color_2 = "#b39066", -- more subtle gold/amber
+  accent_color_1 = "#b39066", -- more subtle gold/amber
+  accent_color_2 = "#7a8aa6", -- subtle blue
 
-  -- Monochromatic greys
+  string = "#a08070",
   grey = "#888888",
   grey_one = "#1c1c1c",
   grey_two = "#f0f0f0",
@@ -68,7 +66,7 @@ palette.cursor_line_nr = {
 palette.git = {
   add = { bg = "#333d1f" },
   delete = { bg = "#561313" },
-  change = { bg = palette.grey_one },
+  change = { bg = palette.accent_color_2 },
   text = { bg = palette.grey_three },
 }
 
@@ -90,46 +88,45 @@ return {
   name = "jellybeans_mono",
   style = "dark",
   palette = palette,
-  -- Mono-specific highlight overrides
   highlights = {
-    -- Basic syntax
-    Comment = { fg = "#606060", italic = true }, -- darker grey
-    Keyword = { fg = "#686868", bold = true }, -- more subtle grey for keywords
-    Statement = { fg = "#686868", bold = true }, -- more subtle, matching keywords
+    Comment = { fg = palette.scorpion, italic = true },
+    Keyword = { fg = palette.grey, bold = false, cterm = { bold = false } },
+    Statement = { link = "Keyword" },
     Type = {
-      fg = "#7a8aa6", -- accent color 1 for types
+      fg = palette.accent_color_1,
       bold = true,
     },
     Function = {
-      fg = palette.accent_color_2, -- accent color 2 for functions to make them pop
+      fg = palette.accent_color_2,
       bold = true,
     },
-    PreProc = { fg = "#787878" }, -- slightly brighter than keywords but still subtle
-    Include = { fg = "#787878", italic = true },
-    Define = { fg = "#787878" },
-    String = { fg = "#a08070" }, -- more subtle brown for strings
+    PreProc = { fg = palette.boulder },
+    Include = { fg = palette.boulder, italic = true },
+    Define = { fg = palette.boulder },
     Constant = { fg = palette.accent_color_1 },
-    Special = { fg = "#a0a8b0" }, -- light grey for special chars
-    Operator = { fg = "#888888" }, -- medium grey
-    Identifier = { fg = "#e8e8d3" },
-    ["@punctuation.bracket"] = { fg = "#c0c0c0" }, -- lighter for brackets
-    ["@punctuation.delimiter"] = { fg = "#c0c0c0" }, -- lighter for delimiters
-    ["@punctuation.special"] = { fg = "#c0c0c0" }, -- lighter for special symbols
-    ["@keyword"] = { fg = "#686868", bold = true }, -- treesitter keyword
-    ["@keyword.function"] = { fg = "#686868", bold = true }, -- function keyword
-    ["@keyword.return"] = { fg = "#686868", bold = true }, -- return keyword
-    ["@keyword.operator"] = { fg = "#787878" }, -- slightly brighter operator keywords
-    ["@function"] = { fg = palette.accent_color_2, bold = true }, -- treesitter function
-    ["@function.builtin"] = { fg = palette.accent_color_2, bold = true }, -- builtin functions
-    ["@function.call"] = { fg = palette.accent_color_2, bold = true }, -- function calls
-    ["@variable"] = {
-      fg = palette.foreground,
-    }, -- any variable name
-    ["@variable.member"] = { fg = palette.alto }, -- for fields
-    ["@variable.parameter"] = { fg = palette.silver_rust, italic = true }, -- parameters
-    ["@type"] = { fg = palette.accent_color_1, bold = true }, -- treesitter types
-    ["@type.builtin"] = { fg = palette.accent_color_1, bold = true }, -- builtin types
-    ["@string"] = { fg = "#a08070" }, -- treesitter strings
-    ["@string.escape"] = { fg = "#a08070" }, -- escaped characters in strings
+    Special = { fg = palette.grey_chateau },
+    Operator = { fg = palette.boulder },
+    Identifier = { fg = palette.foreground },
+    String = { fg = palette.string },
+    ["@punctuation.bracket"] = { fg = palette.silver },
+    ["@punctuation.delimiter"] = { fg = palette.silver },
+    ["@punctuation.special"] = { fg = palette.silver },
+    ["@keyword"] = { link = "Keyword" },
+    ["@keyword.function"] = { link = "Keyword" },
+    ["@function"] = { fg = palette.accent_color_2, bold = true },
+    ["@function.builtin"] = { fg = palette.accent_color_2, bold = true },
+    ["@function.call"] = { fg = palette.accent_color_2, bold = true },
+    ["@variable"] = { fg = palette.foreground },
+    ["@variable.member"] = { fg = palette.alto },
+    ["@variable.parameter"] = { fg = palette.silver_rust, italic = true },
+    ["@type"] = { link = "Type" },
+    ["@type.builtin"] = { link = "Type" },
+    ["@constant.builtin"] = { link = "Type" },
+    ["@string"] = { link = "String" },
+    ["@string.escape"] = { link = "Special" },
+
+    GitSignsAdd = { fg = palette.git.add.bg },
+    GitSignsChange = { fg = palette.git.change.bg },
+    GitSignsDelete = { fg = palette.git.delete.bg },
   },
 }
