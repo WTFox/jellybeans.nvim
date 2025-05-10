@@ -47,6 +47,12 @@ vim.cmd[[colorscheme jellybeans-muted]]
 
 -- Muted light
 vim.cmd[[colorscheme jellybeans-muted-light]]
+
+-- Mono dark
+vim.cmd[[colorscheme jellybeans-mono]]
+
+-- Mono light
+vim.cmd[[colorscheme jellybeans-mono-light]]
 ```
 
 ## 🛠️ Configuration
@@ -85,10 +91,21 @@ Jellybeans offers two palette variants, each with dark and light modes:
   - Light: `jellybeans_light`
 
 - **Muted**: A lower saturation, paper-like theme
+
   - Dark: `jellybeans_muted`
   - Light: `jellybeans_muted_light`
 
-You can easily override the color palette. For example, here's how to change the background color:
+- **Mono**: A monochrome palette with a dark and light mode
+
+  - Dark: `jellybeans_mono`
+  - Light: `jellybeans_mono_light`
+
+  The mono palette uses two accent colors to provide visual distinction while maintaining a cohesive monochromatic look:
+
+  - `accent_color_1`: Used for types and constants (defaults to a muted brown)
+  - `accent_color_2`: Used for functions (defaults to a muted blue)
+
+You can easily override the color palette. For example, here's how to change the background color for OLED:
 
 ```lua
   opts = {
@@ -96,6 +113,18 @@ You can easily override the color palette. For example, here's how to change the
       local light_bg = "#ffffff"
       local dark_bg = "#000000"
       c.background = vim.o.background == "light" and light_bg or dark_bg
+    end,
+  }
+```
+
+To customize the accent colors for the mono palette:
+
+```lua
+  opts = {
+    on_colors = function(c)
+      -- Custom accent colors for mono palette
+      c.accent_color_1 = vim.o.background == "dark" and "#876543"  -- Custom color for types and constants
+      c.accent_color_2 = vim.o.background == "dark" and  "#345678"  -- Custom color for functions
     end,
   }
 ```
