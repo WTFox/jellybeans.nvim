@@ -129,6 +129,72 @@ return {
     ["@string"] = { link = "String" },
     ["@string.escape"] = { link = "Special" },
 
+    -- Blink completion plugin highlights
+    BlinkCmpDoc = {
+      bg = palette.grey_three,
+      fg = palette.accent_color_2,
+    },
+    BlinkCmpDocBorder = {
+      bg = palette.grey_three,
+      fg = palette.grey_three,
+    },
+    BlinkCmpGhostText = {
+      link = "Comment",
+    },
+    BlinkCmpDocSeparator = {
+      bg = palette.grey_three,
+      fg = palette.silver,
+    },
+    BlinkCmpKindCodeium = {
+      bg = "NONE",
+      fg = palette.silver,
+    },
+    BlinkCmpKindCopilot = {
+      bg = "NONE",
+      fg = palette.silver,
+    },
+    BlinkCmpKindDefault = {
+      bg = "NONE",
+      fg = palette.silver,
+    },
+    BlinkCmpKindSupermaven = {
+      bg = "NONE",
+      fg = palette.silver,
+    },
+    BlinkCmpKindTabNine = {
+      bg = "NONE",
+      fg = palette.silver,
+    },
+    BlinkCmpLabel = {
+      bg = "NONE",
+      fg = palette.grey_chateau,
+    },
+    BlinkCmpLabelDeprecated = {
+      bg = "NONE",
+      fg = palette.scorpion,
+      strikethrough = true,
+    },
+    BlinkCmpLabelMatch = {
+      bg = "NONE",
+      fg = palette.accent_color_2,
+    },
+    BlinkCmpMenu = {
+      bg = palette.grey_three,
+      fg = palette.silver,
+    },
+    BlinkCmpMenuBorder = {
+      bg = palette.grey_three,
+      fg = palette.grey_three,
+    },
+    BlinkCmpSignatureHelp = {
+      bg = palette.grey_three,
+      fg = palette.silver,
+    },
+    BlinkCmpSignatureHelpBorder = {
+      bg = palette.grey_three,
+      fg = palette.grey_three,
+    },
+
     GitSignsAdd = { fg = palette.git.add.bg },
     GitSignsChange = { fg = palette.git.change.bg },
     GitSignsDelete = { fg = palette.git.delete.bg },
