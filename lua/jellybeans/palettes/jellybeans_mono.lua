@@ -1,14 +1,19 @@
 local Util = require("jellybeans.util")
 
+local accent_color_1 = "#b39066"
+local accent_color_2 = "#7a8aa6"
+local string = "#a08070"
+
 ---@class Palette
 local palette = {
   foreground = "#e8e8d3",
   background = "#151515",
 
-  accent_color_1 = "#b39066", -- more subtle gold/amber
-  accent_color_2 = "#7a8aa6", -- subtle blue
+  accent_color_1 = accent_color_1,
+  accent_color_2 = accent_color_2,
+  string = string,
 
-  string = "#a08070",
+  perano = accent_color_2,
   grey = "#888888",
   grey_one = "#1c1c1c",
   grey_two = "#f0f0f0",
@@ -43,14 +48,13 @@ local palette = {
   ok = "#afd787",
 
   -- Needed for compatibility with other palettes
-  morning_glory = "#8fbfdc",
-  green_smoke = "#fad07a",
+  morning_glory = accent_color_2,
+  green_smoke = accent_color_1,
   koromiko = "#888888",
   raw_sienna = "#a0a8b0",
   biloba_flower = "#c7c7c7",
-  goldenrod = "#fad07a",
+  goldenrod = accent_color_1,
   brandy = "#ccc5c4",
-  perano = "#8fbfdc",
   wewak = "#a0a8b0",
 }
 
