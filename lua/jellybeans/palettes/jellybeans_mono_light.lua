@@ -11,7 +11,7 @@ local palette = {
 
   accent_color_1 = accent_color_1,
   accent_color_2 = accent_color_2,
-  string = string,
+  str = string,
 
   perano = accent_color_2,
   grey = "#787878",
@@ -90,111 +90,113 @@ return {
   name = "jellybeans_mono_light",
   style = "light",
   palette = palette,
-  highlights = {
-    Comment = { fg = palette.scorpion, italic = true },
-    Keyword = { fg = palette.grey, bold = false, cterm = { bold = false } },
-    Statement = { link = "Keyword" },
-    Type = {
-      fg = palette.accent_color_1,
-      bold = true,
-    },
-    Function = {
-      fg = palette.accent_color_2,
-      bold = true,
-    },
-    PreProc = { fg = palette.boulder },
-    Include = { fg = palette.boulder, italic = true },
-    Define = { fg = palette.boulder },
-    Constant = { fg = palette.accent_color_1 },
-    Special = { fg = palette.grey_chateau },
-    Operator = { fg = palette.boulder },
-    Identifier = { fg = palette.foreground },
-    String = { fg = palette.string },
-    ["@punctuation.bracket"] = { fg = palette.silver },
-    ["@punctuation.delimiter"] = { fg = palette.silver },
-    ["@punctuation.special"] = { fg = palette.silver },
-    ["@keyword"] = { link = "Keyword" },
-    ["@keyword.function"] = { link = "Keyword" },
-    ["@function"] = { fg = palette.accent_color_2, bold = true },
-    ["@function.builtin"] = { fg = palette.accent_color_2, bold = true },
-    ["@function.call"] = { fg = palette.accent_color_2, bold = true },
-    ["@variable"] = { fg = palette.foreground },
-    ["@variable.member"] = { fg = palette.alto },
-    ["@variable.parameter"] = { fg = palette.silver_rust, italic = true },
-    ["@type"] = { link = "Type" },
-    ["@type.builtin"] = { link = "Type" },
-    ["@constant.builtin"] = { link = "Type" },
-    ["@string"] = { link = "String" },
-    ["@string.escape"] = { link = "Special" },
+  highlights = function(p)
+    return {
+      Comment = { fg = p.scorpion, italic = true },
+      Keyword = { fg = p.grey, bold = false, cterm = { bold = false } },
+      Statement = { link = "Keyword" },
+      Type = {
+        fg = p.accent_color_1,
+        bold = true,
+      },
+      Function = {
+        fg = p.accent_color_2,
+        bold = true,
+      },
+      PreProc = { fg = p.boulder },
+      Include = { fg = p.boulder, italic = true },
+      Define = { fg = p.boulder },
+      Constant = { fg = p.accent_color_1 },
+      Special = { fg = p.grey_chateau },
+      Operator = { fg = p.boulder },
+      Identifier = { fg = p.foreground },
+      String = { fg = p.str },
+      ["@punctuation.bracket"] = { fg = p.silver },
+      ["@punctuation.delimiter"] = { fg = p.silver },
+      ["@punctuation.special"] = { fg = p.silver },
+      ["@keyword"] = { link = "Keyword" },
+      ["@keyword.function"] = { link = "Keyword" },
+      ["@function"] = { fg = p.accent_color_2, bold = true },
+      ["@function.builtin"] = { fg = p.accent_color_2, bold = true },
+      ["@function.call"] = { fg = p.accent_color_2, bold = true },
+      ["@variable"] = { fg = p.foreground },
+      ["@variable.member"] = { fg = p.alto },
+      ["@variable.parameter"] = { fg = p.silver_rust, italic = true },
+      ["@type"] = { link = "Type" },
+      ["@type.builtin"] = { link = "Type" },
+      ["@constant.builtin"] = { link = "Type" },
+      ["@string"] = { link = "String" },
+      ["@string.escape"] = { link = "Special" },
 
-    -- Blink completion plugin highlights
-    BlinkCmpDoc = {
-      bg = palette.grey_three,
-      fg = palette.accent_color_2,
-    },
-    BlinkCmpDocBorder = {
-      bg = palette.grey_three,
-      fg = palette.grey_three,
-    },
-    BlinkCmpGhostText = {
-      link = "Comment",
-    },
-    BlinkCmpDocSeparator = {
-      bg = palette.grey_three,
-      fg = palette.silver,
-    },
-    BlinkCmpKindCodeium = {
-      bg = "NONE",
-      fg = palette.silver,
-    },
-    BlinkCmpKindCopilot = {
-      bg = "NONE",
-      fg = palette.silver,
-    },
-    BlinkCmpKindDefault = {
-      bg = "NONE",
-      fg = palette.silver,
-    },
-    BlinkCmpKindSupermaven = {
-      bg = "NONE",
-      fg = palette.silver,
-    },
-    BlinkCmpKindTabNine = {
-      bg = "NONE",
-      fg = palette.silver,
-    },
-    BlinkCmpLabel = {
-      bg = "NONE",
-      fg = palette.grey_chateau,
-    },
-    BlinkCmpLabelDeprecated = {
-      bg = "NONE",
-      fg = palette.scorpion,
-      strikethrough = true,
-    },
-    BlinkCmpLabelMatch = {
-      bg = "NONE",
-      fg = palette.accent_color_2,
-    },
-    BlinkCmpMenu = {
-      bg = palette.grey_three,
-      fg = palette.silver,
-    },
-    BlinkCmpMenuBorder = {
-      bg = palette.grey_three,
-      fg = palette.grey_three,
-    },
-    BlinkCmpSignatureHelp = {
-      bg = palette.grey_three,
-      fg = palette.silver,
-    },
-    BlinkCmpSignatureHelpBorder = {
-      bg = palette.grey_three,
-      fg = palette.grey_three,
-    },
+      -- Blink completion plugin highlights
+      BlinkCmpDoc = {
+        bg = p.grey_three,
+        fg = p.accent_color_2,
+      },
+      BlinkCmpDocBorder = {
+        bg = p.grey_three,
+        fg = p.grey_three,
+      },
+      BlinkCmpGhostText = {
+        link = "Comment",
+      },
+      BlinkCmpDocSeparator = {
+        bg = p.grey_three,
+        fg = p.silver,
+      },
+      BlinkCmpKindCodeium = {
+        bg = "NONE",
+        fg = p.silver,
+      },
+      BlinkCmpKindCopilot = {
+        bg = "NONE",
+        fg = p.silver,
+      },
+      BlinkCmpKindDefault = {
+        bg = "NONE",
+        fg = p.silver,
+      },
+      BlinkCmpKindSupermaven = {
+        bg = "NONE",
+        fg = p.silver,
+      },
+      BlinkCmpKindTabNine = {
+        bg = "NONE",
+        fg = p.silver,
+      },
+      BlinkCmpLabel = {
+        bg = "NONE",
+        fg = p.grey_chateau,
+      },
+      BlinkCmpLabelDeprecated = {
+        bg = "NONE",
+        fg = p.scorpion,
+        strikethrough = true,
+      },
+      BlinkCmpLabelMatch = {
+        bg = "NONE",
+        fg = p.accent_color_2,
+      },
+      BlinkCmpMenu = {
+        bg = p.grey_three,
+        fg = p.silver,
+      },
+      BlinkCmpMenuBorder = {
+        bg = p.grey_three,
+        fg = p.grey_three,
+      },
+      BlinkCmpSignatureHelp = {
+        bg = p.grey_three,
+        fg = p.silver,
+      },
+      BlinkCmpSignatureHelpBorder = {
+        bg = p.grey_three,
+        fg = p.grey_three,
+      },
 
-    GitSignsAdd = { fg = palette.ok },
-    GitSignsChange = { fg = palette.info },
-    GitSignsDelete = { fg = palette.error },
-  },
+      GitSignsAdd = { fg = p.git.add.bg },
+      GitSignsChange = { fg = p.git.change.bg },
+      GitSignsDelete = { fg = p.git.delete.bg },
+    }
+  end,
 }

@@ -15,8 +15,8 @@ function M.setup(opts, palette_name_override)
   local groups = require("jellybeans.groups").setup(p.palette, opts)
 
   -- Apply palette-specific highlight overrides if they exist
-  if p.highlights and p.highlights then
-    for group_name, highlight in pairs(p.highlights) do
+  if p.highlights ~= nil then
+    for group_name, highlight in pairs(p.highlights(p.palette)) do
       -- Honor user preferences for italics and transparent
       if highlight.italic ~= nil and opts and opts.italics == false then
         highlight.italic = false
