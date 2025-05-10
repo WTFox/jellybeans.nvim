@@ -32,6 +32,9 @@ function M.get(name, colors, opts)
 end
 
 function M.setup(colors, opts)
+  opts = opts or {}
+  opts.plugins = opts.plugins or {}
+
   local groups = {
     editor = true,
     syntax = true,
@@ -86,7 +89,9 @@ function M.setup(colors, opts)
 
   Util.resolve(ret)
 
-  opts.on_highlights(ret, colors)
+  if opts.on_highlights then
+    opts.on_highlights(ret, colors)
+  end
 
   return ret, groups
 end

@@ -37,7 +37,7 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
   "wtfox/jellybeans.nvim",
   lazy = false,
   priority = 1000,
-  opts = {},
+  opts = {}, -- Optional
 }
 ```
 

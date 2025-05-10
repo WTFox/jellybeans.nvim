@@ -8,7 +8,7 @@ function M.get_palette(palette_name, opts)
     return require("jellybeans.palettes.jellybeans")
   end
 
-  if opts.on_colors then
+  if opts and opts.on_colors then
     opts.on_colors(p.palette)
   end
 

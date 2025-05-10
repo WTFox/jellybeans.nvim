@@ -3,6 +3,7 @@ local Util = require("jellybeans.util")
 local M = {}
 
 function M.get(c, opts)
+  opts = opts or {}
   return {
     ["@annotation"] = "PreProc",
     ["@attribute"] = "PreProc",
