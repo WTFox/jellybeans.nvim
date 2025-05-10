@@ -14,6 +14,12 @@ _Muted Dark (`jellybeans_muted`)_
 _Muted Light (`jellybeans_muted_light`)_
 ![Muted Light](./images/muted-light.png)
 
+_Mono Dark (`jellybeans_mono`)_
+![Mono Dark](./images/mono.png)
+
+_Mono Light (`jellybeans_mono_light`)_
+![Mono Light](./images/mono-light.png)
+
 ## ✨ Features
 
 - Written in Lua
