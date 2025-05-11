@@ -18,8 +18,8 @@ M.defaults = {
   italics = true,
   flat_ui = true,
   background = {
-    dark = "jellybeans_muted",
-    light = "jellybeans_muted_light",
+    dark = "jellybeans",
+    light = "jellybeans_light",
   },
   plugins = {
     all = false,

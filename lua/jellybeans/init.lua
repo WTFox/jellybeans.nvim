@@ -8,7 +8,8 @@ end
 function M.load(palette_name_override)
   local ok, result = pcall(function()
     local config = require("jellybeans.config")
-    return require("jellybeans.highlights").setup(config.opts, palette_name_override)
+    local opts = config.opts or config.defaults
+    return require("jellybeans.highlights").setup(opts, palette_name_override)
   end)
 
   if not ok then
