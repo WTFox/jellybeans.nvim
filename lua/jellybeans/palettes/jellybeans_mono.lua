@@ -41,9 +41,9 @@ local palette = {
   old_brick = "#f0e0d6",
 
   -- Diagnostics
-  error = "#d74545",
+  error = "#c95c5c",
   warning = "#ffaf00",
-  info = "#5f9ecf",
+  info = accent_color_2,
   hint = "#a08070",
   ok = "#afd787",
 

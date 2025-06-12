@@ -53,10 +53,10 @@ local palette = {
   dell = "#437019",
   calypso = "#2B5B77",
 
-  error = "#ff0000",
+  error = "#d74545",
   warning = "#ffaf00",
-  info = "#87d7ff",
-  hint = "#d7af87",
+  info = "#5f9ecf",
+  hint = "#a08070",
   ok = "#afd787",
 }
 
@@ -69,10 +69,10 @@ palette.cursor_line_nr = {
 }
 
 palette.git = {
-  add = { bg = "#333d1f" },
-  delete = { bg = "#561313" },
-  change = { bg = palette.grey_one },
-  text = { bg = palette.grey_three },
+  add = { fg = palette.ok },
+  delete = { fg = palette.error },
+  change = { fg = palette.info },
+  text = { fg = palette.hint },
 }
 
 palette.diag = {
