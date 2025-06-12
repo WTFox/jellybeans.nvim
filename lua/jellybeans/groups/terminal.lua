@@ -5,7 +5,7 @@ function M.get(c, opts)
     [0] = c.total_black, -- black
     [1] = c.error, -- red
     [2] = c.highland, -- green
-    [3] = c.brandy, -- yellow
+    [3] = c.accent_color_1 and c.accent_color_1 or c.brandy, -- yellow
     [4] = c.ship_cove, -- blue
     [5] = c.wewak, -- magenta
     [6] = c.morning_glory, -- cyan

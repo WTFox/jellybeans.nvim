@@ -27,7 +27,7 @@ ansi = [
 
 brights = [
   "#404040",
-  "#a0a8b0",
+  "#c95c5c",
   "#a08070",
   "#b39066",
   "#7a8aa6",
@@ -56,3 +56,4 @@ new_tab.bg_color = "#101010"
 new_tab.fg_color = "#888888"
 new_tab_hover.bg_color = "#1c1c1c"
 new_tab_hover.fg_color = "#a0a8b0"
+
