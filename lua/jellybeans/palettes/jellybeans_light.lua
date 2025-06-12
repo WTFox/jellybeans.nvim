@@ -70,10 +70,10 @@ palette.cursor_line_nr = {
 }
 
 palette.git = {
-  add = { bg = palette.tea_green },
-  delete = { bg = palette.error },
-  change = { bg = palette.info },
-  text = { bg = palette.none },
+  add = { fg = palette.ok },
+  delete = { fg = palette.error },
+  change = { fg = palette.info },
+  text = { fg = palette.hint },
 }
 
 palette.diag = {

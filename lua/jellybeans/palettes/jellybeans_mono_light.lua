@@ -66,10 +66,10 @@ palette.cursor_line_nr = {
 }
 
 palette.git = {
-  add = { bg = "#d8e0d0" },
-  delete = { bg = "#e8d0d0" },
-  change = { bg = "#d0d8e0" },
-  text = { bg = palette.grey_three },
+  add = { fg = palette.ok },
+  delete = { fg = palette.error },
+  change = { fg = palette.info },
+  text = { fg = palette.hint },
 }
 
 palette.diag = {
@@ -194,9 +194,9 @@ return {
         fg = p.grey_three,
       },
 
-      GitSignsAdd = { fg = p.git.add.bg },
-      GitSignsChange = { fg = p.git.change.bg },
-      GitSignsDelete = { fg = p.git.delete.bg },
+      GitSignsAdd = p.git.add,
+      GitSignsChange = p.git.change,
+      GitSignsDelete = p.git.delete,
     }
   end,
 }

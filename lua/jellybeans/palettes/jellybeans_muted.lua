@@ -68,10 +68,10 @@ palette.cursor_line_nr = {
 }
 
 palette.git = {
-  add = { bg = "#2e3824" }, -- Less saturated
-  delete = { bg = "#4d201b" }, -- Less saturated
-  change = { bg = palette.grey_one },
-  text = { bg = palette.grey_three },
+  add = { fg = palette.ok },
+  delete = { fg = palette.error },
+  change = { fg = palette.info },
+  text = { fg = palette.hint },
 }
 
 palette.diag = {
