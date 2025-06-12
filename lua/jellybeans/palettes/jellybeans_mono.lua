@@ -41,10 +41,10 @@ local palette = {
   old_brick = "#f0e0d6",
 
   -- Diagnostics
-  error = "#ff0000",
+  error = "#d74545",
   warning = "#ffaf00",
-  info = "#87d7ff",
-  hint = "#a08070", -- more subtle brown
+  info = "#5f9ecf",
+  hint = "#a08070",
   ok = "#afd787",
 
   -- Needed for compatibility with other palettes
@@ -68,10 +68,10 @@ palette.cursor_line_nr = {
 }
 
 palette.git = {
-  add = { bg = "#333d1f" },
-  delete = { bg = "#561313" },
-  change = { bg = palette.accent_color_2 },
-  text = { bg = palette.grey_three },
+  add = { fg = palette.ok },
+  delete = { fg = palette.error },
+  change = { fg = palette.info },
+  text = { fg = palette.hint },
 }
 
 palette.diag = {
@@ -197,9 +197,9 @@ return {
         fg = p.grey_three,
       },
 
-      GitSignsAdd = { fg = p.git.add.bg },
-      GitSignsChange = { fg = p.git.change.bg },
-      GitSignsDelete = { fg = p.git.delete.bg },
+      GitSignsAdd = p.git.add,
+      GitSignsChange = p.git.change,
+      GitSignsDelete = p.git.delete,
 
       LspReferenceWrite = { bg = p.bright_grey },
       LspReferenceRead = { bg = p.bright_grey },
