@@ -24,6 +24,8 @@ function M.get(c, opts)
       fg = c.biloba_flower,
       bold = opts.bold,
     },
+    WinBar = { bg = opts.transparent and "NONE" or c.background },
+    WinBarNC = { bg = opts.transparent and "NONE" or c.background },
     ColorColumn = { bg = c.total_black },
     Conceal = { fg = c.morning_glory },
     Cursor = { bg = c.alto, fg = c.background },
