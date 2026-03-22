@@ -1,7 +1,7 @@
 local M = {
   module = "jellybeans",
   background = {
-    dark = "jellybeans_mono",
+    dark = "jellybeans_muted",
     light = "jellybeans_mono_light",
   },
   opts = {
@@ -12,7 +12,7 @@ local M = {
   },
   globals = { vim = vim },
   cache = {}, ---@type table<string, boolean>
-  colorscheme = "jellybeans-mono",
+  colorscheme = "jellybeans-muted",
 }
 
 function M.reset()
