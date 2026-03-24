@@ -75,6 +75,7 @@ function M.get(c, opts)
     Title = { fg = c.mantis },
     Visual = { bg = c.visual },
     WinSeparator = { fg = c.grey_one },
+    MsgSeparator = { fg = c.gravel, bg = c.background },
 
     GitSignsAddVirtLnInLine = c.git.add,
     GitSignsChangeVirtLnInLine = c.git.change,
