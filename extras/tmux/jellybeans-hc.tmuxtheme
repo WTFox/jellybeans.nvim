@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# Jellybeans HC theme for tmux
+# Based on the Jellybeans HC Neovim theme palette
+
+# Jellybeans HC colors
+thm_bg="#060606"
+thm_fg="#f8f8f0"
+thm_black="#040404"
+thm_red="#b02020"
+thm_green="#c0d880"
+thm_yellow="#f0e098"
+thm_blue="#98b0e0"
+thm_magenta="#d8c8ff"
+thm_cyan="#3070a0"
+thm_white="#d8d8d8"
+thm_orange="#f0a080"
+thm_black4="#303030"
+thm_bright_blue="#aad4f8"
+thm_bright_white="#ffffff"
+
+# Status line colors
+thm_gray="#909090"
+thm_statusline_bg="#0e0e0e"
+thm_statusline_fg="#a8b0b8"
+thm_border="#1a1a1a"
+thm_active_border="#98b0e0"
+thm_highlight="#303030"
+
+# LuaLine-specific colors
+thm_accent="#aad4f8"        # Accent color for sections (morning_glory)
+thm_total_black="#000000"   # For text on accent background
+
+# Specialized colors
+thm_cursor="#f8f8f0"
+thm_visual="#303030"
+thm_error="#ff5050"
+thm_warning="#ffc800"
+thm_info="#60b8ff"

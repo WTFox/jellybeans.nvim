@@ -1,0 +1,31 @@
+# name = "jellybeans-hc"
+# author = "A. Fox"
+
+palette = 0=#060606
+palette = 1=#ff5050
+palette = 2=#c0d880
+palette = 3=#ffe080
+palette = 4=#98b0e0
+palette = 5=#d8c8ff
+palette = 6=#78a0b8
+palette = 7=#f8f8f0
+palette = 8=#909090
+palette = 9=#b02020
+palette = 10=#8cd468
+palette = 11=#ffc060
+palette = 12=#aad4f8
+palette = 13=#8800a8
+palette = 14=#aad4f8
+palette = 15=#f8f8f8
+palette = 16=#ff5050
+palette = 17=#ffc800
+palette = 18=#0e0e0e
+palette = 19=#282828
+palette = 20=#686868
+palette = 21=#d8d8d8
+
+background = #060606
+foreground = #f8f8f0
+cursor-color = #c0e0ff
+selection-background = #303030
+selection-foreground = #f8f8f0

@@ -39,6 +39,18 @@ To use any of these themes:
   theme = jellybeans-muted-light
   ```
 
+### High Contrast Palette
+- **Dark theme**:
+  ```
+  theme = jellybeans-hc
+  ```
+
+### Warm Palette
+- **Dark theme**:
+  ```
+  theme = jellybeans-warm
+  ```
+
 5. Reload your Ghostty config to apply the changes.
 
 ## Theme Differences
@@ -46,5 +58,7 @@ To use any of these themes:
 - **Default vibrant palette**: The original Jellybeans with vibrant colors
 - **Mono palette**: Uses a restricted color palette focused on browns and blues for a more uniform look
 - **Muted palette**: Uses desaturated colors for a softer appearance
+- **High contrast palette**: Near-black background with boosted accent saturation for maximum contrast
+- **Warm palette**: Neutral tones shifted toward amber and espresso
 
 Choose the theme that best matches your Neovim theme for a consistent experience.

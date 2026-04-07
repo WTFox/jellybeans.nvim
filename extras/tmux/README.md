@@ -10,6 +10,8 @@ This directory contains tmux themes that match the Jellybeans Neovim colorscheme
 - **jellybeans-mono-light** - Light variant of the monochromatic theme
 - **jellybeans-muted** - Dark theme with desaturated colors
 - **jellybeans-muted-light** - Light theme with desaturated colors
+- **jellybeans-hc** - High contrast dark theme with near-black background and boosted accents
+- **jellybeans-warm** - Dark theme with neutral tones shifted toward amber and espresso
 
 ## Installation
 
@@ -47,7 +49,7 @@ The Jellybeans tmux theme sets a complete status bar with configurable options. 
 
 ```bash
 # Theme Selection
-set -g @jellybeans_flavour 'jellybeans'           # Theme flavor (default, light, mono, mono-light, muted, muted-light)
+set -g @jellybeans_flavour 'jellybeans'           # Theme flavor (default, light, mono, mono-light, muted, muted-light, hc, warm)
 
 # Separator Options (requires Nerd Fonts)
 set -g @jellybeans_left_separator ''             # Left separator (default is "")

@@ -1,0 +1,31 @@
+# name = "jellybeans-warm"
+# author = "A. Fox"
+
+palette = 0=#1c1510
+palette = 1=#d74545
+palette = 2=#99ad6a
+palette = 3=#fad07a
+palette = 4=#8197bf
+palette = 5=#c6b6ee
+palette = 6=#668799
+palette = 7=#edd9b8
+palette = 8=#8a8070
+palette = 9=#902020
+palette = 10=#70b950
+palette = 11=#e6a75a
+palette = 12=#8fbfdc
+palette = 13=#700089
+palette = 14=#8fbfdc
+palette = 15=#f0e4d0
+palette = 16=#d74545
+palette = 17=#ffaf00
+palette = 18=#241a10
+palette = 19=#3c2c1c
+palette = 20=#7a6a58
+palette = 21=#c8b898
+
+background = #1c1510
+foreground = #edd9b8
+cursor-color = #c8b878
+selection-background = #4a3828
+selection-foreground = #edd9b8

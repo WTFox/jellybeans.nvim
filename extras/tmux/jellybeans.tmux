@@ -10,6 +10,8 @@ declare -A themes=(
   ["jellybeans-mono-light"]="jellybeans-mono-light.tmuxtheme"
   ["jellybeans-muted"]="jellybeans-muted.tmuxtheme"
   ["jellybeans-muted-light"]="jellybeans-muted-light.tmuxtheme"
+  ["jellybeans-hc"]="jellybeans-hc.tmuxtheme"
+  ["jellybeans-warm"]="jellybeans-warm.tmuxtheme"
 )
 
 # Tmux options

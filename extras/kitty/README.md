@@ -30,4 +30,14 @@ To use this theme:
    include themes/jellybeans-light.conf
    ```
 
+   - For the high contrast theme:
+   ```
+   include themes/jellybeans-hc.conf
+   ```
+
+   - For the warm theme:
+   ```
+   include themes/jellybeans-warm.conf
+   ```
+
 5. Restart Kitty or reload your configuration (usually `ctrl+shift+f5` or `cmd+ctrl+,` on macOS)
