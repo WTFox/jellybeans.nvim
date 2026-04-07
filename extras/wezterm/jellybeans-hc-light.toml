@@ -1,0 +1,58 @@
+[metadata]
+name = "jellybeans-hc-light"
+author = "A. Fox"
+origin_url = ""
+
+[colors]
+foreground = "#000000"
+background = "#fafafa"
+cursor_fg = "#fafafa"
+cursor_bg = "#000000"
+cursor_border = "#000000"
+selection_fg = "#000000"
+selection_bg = "#e8d0c0"
+compose_cursor = "#000000"
+visual_bell = "#fff0f2"
+
+ansi = [
+  "#f5f5f5", # cod_grey
+  "#c00000", # error
+  "#507020", # green_smoke
+  "#6a5000", # brandy
+  "#1a3a80", # ship_cove
+  "#4a2090", # biloba_flower
+  "#0a3060", # calypso
+  "#606060", # silver
+]
+
+brights = [
+  "#383838", # tundora
+  "#8a3a10", # raw_sienna
+  "#3a6030", # highland
+  "#8a5000", # koromiko
+  "#0a4a7a", # morning_glory
+  "#8a1010", # old_brick
+  "#306070", # hoki
+  "#000000",  # total_white (swapped)
+]
+
+[colors.indexed]
+16 = "#8a0050" # wewak
+17 = "#4a5020" # costa_del_sol
+18 = "#f0f0f0" # grey_one
+19 = "#e8e8e8" # grey_three
+20 = "#607080" # regent_grey
+21 = "#404040" # silver_rust
+
+[colors.tab_bar]
+background = "#fafafa"
+active_tab.bg_color = "#f0f0f0"
+active_tab.fg_color = "#000000"
+inactive_tab.bg_color = "#f5f5f5"
+inactive_tab.fg_color = "#707070"
+inactive_tab_hover.bg_color = "#f0f0f0"
+inactive_tab_hover.fg_color = "#607080"
+new_tab.bg_color = "#f5f5f5"
+new_tab.fg_color = "#707070"
+new_tab_hover.bg_color = "#f0f0f0"
+new_tab_hover.fg_color = "#607080"
